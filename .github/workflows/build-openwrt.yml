@@ -11,9 +11,10 @@
 name: Build OpenWrt
 
 on:
-  push:
-    branches: 
-      - main
+  repository_dispatch:
+#  push:
+##    branches: 
+#      - main
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
