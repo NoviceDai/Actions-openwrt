@@ -130,7 +130,8 @@ jobs:
       #if: steps.organize.outputs.STATUS == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
+        path: ${{ env.FIRMWARE }}/*-squashfs-*
+        
         if-no-files-found: warn 
         retention-days: 7
 
