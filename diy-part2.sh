@@ -14,4 +14,4 @@
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Modify firmware information 
-sed -i '23a distversion = "DX Compiled at $(date +"%Y.%m.%d-%H:%M")"' feeds\luci\modules\luci-lua-runtime\src\mkversion.sh
+sed -i '23a distversion = "DX Compiled at $(date +"%Y.%m.%d-%H:%M")"' feeds/luci/modules/luci-lua-runtime/src/mkversion.sh
