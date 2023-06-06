@@ -134,9 +134,10 @@ jobs:
         echo "STATUS=success" >> $GITHUB_OUTPUT
 
     - name: Remove artifacts
-      uses: c-hive/gha-remove-artifacts@v1.2.0
+      uses: c-hive/gha-remove-artifacts@v1.3.0
       with:
-        age: '10 days'
+        age: '5 day'
+        skip-recent: 2
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
