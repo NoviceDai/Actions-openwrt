@@ -141,16 +141,17 @@ jobs:
       with:
         age: '5 day'
         skip-recent: 2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       #if: steps.organize.outputs.STATUS == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}/*-squashfs-*
-        
+        path: ${{ env.FIRMWARE }}/*-squashfs-sysupgrade*
         if-no-files-found: warn 
-        retention-days: 7
+        retention-days: 3
 
     - name: Generate release tag
       id: tag
