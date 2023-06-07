@@ -1,25 +1,11 @@
 #!/bin/bash
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
+
 # File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
+# Description: OpenWrt DIY script part 2 (After Update feeds  before install feeds )
 #
 
-# Modify default IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
-# Modify Dropbear Welcome banner..
+#Tor ...change default ver 0.4.7.19/...to ver 0.4.0.4.8.1-alpha 
+sed -i "/PKG_VERSION:/cPKG_VERSION:=0.4.8.1-alpha"  feeds/packages/net/tor/Makefile
+sed -i "/PKG_HASH:/cPKG_HASH:=f73719a8cec65ce473fae19485b3b89e767a26b20fa9e172052df2cfd4f92e51"  feeds/packages/net/tor/Makefile
 
-cat <<EOF >package/base-files/files/etc/banner
- ___       _ __  _ _           
-| . \ ___ <_>\ \/ <_> ___  ___ 
-| | |<_> || | \ \ | |<_> |/ . \      ~~
-|___/<___||_|_/\_\|_|<___|\___/    ()
-------------------------------------------------------
- %D %V, Compiled at $(date +'%Y.%m.%d') by Daixiao
-------------------------------------------------------
-EOF
+#End 
