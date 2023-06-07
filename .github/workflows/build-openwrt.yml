@@ -76,7 +76,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Change default package
-      run:
+      run: |
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
@@ -84,11 +84,11 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Reupdate feeds 
-      run: | 
-        cd openwrt 
-        ./scripts/feeds update -a    
-        ./scripts/feeds install -a
+#    - name: Reupdate feeds 
+#      run: | 
+#        cd openwrt 
+#        ./scripts/feeds update -a    
+#        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
