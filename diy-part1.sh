@@ -17,7 +17,7 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-#echo 'src-git kenzo https://github.com/kenzok8/small-package.git' >>feeds.conf.default
-echo 'src-git daixiao https://github.com/NoviceDai/OpenwrtAddon.git' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/small-package.git' >>feeds.conf.default
+#echo 'src-git daixiao https://github.com/NoviceDai/OpenwrtAddon.git' >>feeds.conf.default
 
 
