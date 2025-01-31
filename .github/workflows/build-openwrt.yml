@@ -82,11 +82,11 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-#    - name: Reupdate feeds 
-#      run: | 
-#        cd openwrt 
-#        ./scripts/feeds update -a    
-#        ./scripts/feeds install -a
+    - name: Reupdate feeds 
+      run: | 
+        cd openwrt 
+        ./scripts/feeds update -a    
+        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
