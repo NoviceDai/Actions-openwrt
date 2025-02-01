@@ -12,7 +12,7 @@
 #delete conflict packages 
 rm -rf feeds/smpackage/{amule,luci-app-bandwidthd,luci-app-dogcom,luci-app-gowebdav,natflow}
 #delete recursive dependency
-rm -rf feeds/smpackage/{luci-app-torbp,luci-app-easymesh,mentohust
+rm -rf feeds/smpackage/{luci-app-torbp,luci-app-easymesh,mentohust}
 
 #relplace go version 
 rm -rf feeds/packages/lang/golang
