@@ -11,6 +11,7 @@
 # 到kenzok8的github仓库页面看删除哪些冲突 
 #delete conflict packages 
 rm -rf feeds/smpackage/{amule,luci-app-bandwidthd,luci-app-dogcom,luci-app-gowebdav,natflow}
+rm -rf feeds/smpackage/{luci-app-fullconenat,luci-app-natter,luci-app-npc,luci-app-unblockmusic,natter,UnblockNeteaseMusic-Go,nps}
 
 #delete recursive dependency
 rm -rf feeds/smpackage/{luci-app-torbp,luci-app-easymesh,mentohust}
