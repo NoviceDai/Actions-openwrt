@@ -106,7 +106,9 @@ jobs:
       run: |
         cd openwrt
         make defconfig
+        echo -e "Downloading packages....."
         make download -j8
+        echo -e "Check downloaded files..."
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
@@ -116,7 +118,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         echo "make -j$(nproc) || make -j1 || make -j1 V=s  || echo -e 'Something Wrong!' "
-        make -j1 V=s  &&  echo "STATUS=success" >>$GITHUB_OUTPUT ||  echo "STATUS=failed" >>$GITHUB_OUTPUT
+        make -j1 V=s &&  echo "STATUS=success" >>$GITHUB_OUTPUT ||  echo "STATUS=failed" >>$GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
