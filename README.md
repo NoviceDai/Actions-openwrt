@@ -40,8 +40,9 @@ A template for building OpenWrt with GitHub Actions
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 
 ## History 
-- 2025/02/02 v3.15  Based on Openwrt V23.05, with plugins: DDNS/Uhttpd/Passwall/Wolplus 
-- 2025/02/?? V3.16  Add luci-app-wechatpush  
+- 2025/02/02 v3.15  Based on Openwrt V23.05, with plugins: DDNS/Uhttpd/Passwall/Wolplus
+- 2025/02/?? V3.16  Add luci-app-wechatpush
+- 2025/02/21 v0.1  放弃passwall，硬件很难支持。 转向：最简单方案，dnsmasq-full + chinadns-ng =》 旁路由 nftables 转发
 
 
 ## License
