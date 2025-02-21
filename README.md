@@ -39,6 +39,11 @@ A template for building OpenWrt with GitHub Actions
 - [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 
+## History 
+- 2025/02/02 v3.15  Based on Openwrt V23.05, with plugins: DDNS/Uhttpd/Passwall/Wolplus 
+- 2025/02/?? V3.16  Add luci-app-wechatpush  
+
+
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
