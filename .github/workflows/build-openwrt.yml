@@ -21,7 +21,7 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  REMOVE_ARTIFACTS: false
+  REMOVE_ARTIFACTS: true
   TZ: Asia/Shanghai
   DEVICE_NAME:
   FILE_DATE:
@@ -76,13 +76,6 @@ jobs:
       run: |
         cd openwrt 
         ./scripts/feeds install -a 
-
-# ######  更换default包后不能重新安装
-#     - name: Reupdate feeds 
-#       run: | 
-#         cd openwrt 
-#         echo -e "MyMark......Packages Install again..."        
-#         ./scripts/feeds update -a && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |

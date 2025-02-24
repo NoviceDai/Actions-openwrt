@@ -40,13 +40,12 @@ A template for building OpenWrt with GitHub Actions
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 
 ## History 
-- 2025/02/02 v3.15  Based on Openwrt V23.05, with plugins: DDNS/Uhttpd/Passwall/Wolplus
-- 2025/02/?? V3.16  Add luci-app-wechatpush
 - 2025/02/21 v0.1  放弃passwall，硬件很难支持。 转向：最简单方案，dnsmasq-full + chinadns-ng =》 旁路由 nftables 转发
 - 2025/02/22 v0.2  add luci-app-chinadns-ng , edit diy-part1.sh delete smallpackage 
 - 2025/02/23 V0.5  chinadns-ng, smartdns,luci-app-smartdns 
 - 2025/02/24 V0.6  luci-app-chinadns-ng / workflow v2
-- 2025/02/24 V0.7  增加smallpackage，解决luci-app-chinadns-ng没有chinadns-ng支持的bug。
+- 2025/02/24 V0.7  增加smallpackage，解决luci-app-chinadns-ng没有chinadns-ng支持的bug。增加luci-app-wolplus 
+- 2025/02/24 V0.8  Bind-dig  / DDNS scripts  
  
 
 ## License
