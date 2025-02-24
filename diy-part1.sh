@@ -16,7 +16,7 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-#echo 'src-git smpackage  https://github.com/kenzok8/small-package.git' >>feeds.conf.default
+echo 'src-git smpackage  https://github.com/kenzok8/small-package.git' >>feeds.conf.default
 echo 'src-git daixiao https://github.com/NoviceDai/OpenwrtAddon.git' >>feeds.conf.default
 
 #增加软件源放到官方源之前 

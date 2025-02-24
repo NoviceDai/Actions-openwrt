@@ -76,14 +76,13 @@ jobs:
       run: |
         cd openwrt 
         ./scripts/feeds install -a 
-        echo -e "..........Install again..."        
-        ./scripts/feeds install -a 
 
-######  不是必须的
-    - name: Reupdate feeds 
-      run: | 
-        cd openwrt 
-        ./scripts/feeds update -a && ./scripts/feeds install -a
+# ######  更换default包后不能重新安装
+#     - name: Reupdate feeds 
+#       run: | 
+#         cd openwrt 
+#         echo -e "MyMark......Packages Install again..."        
+#         ./scripts/feeds update -a && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
@@ -98,7 +97,7 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        echo -e "Downloading packages....."
+        echo -e "MyMark ... Downloading packages....."
         make download -j8
         echo -e "Check downloaded files..."
         find dl -size -1024c -exec ls -l {} \;
@@ -108,8 +107,8 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        echo -e "$(nproc) thread compile..."
-        echo "make -j$(nproc) || make -j1 || make -j1 V=s  || echo -e 'Something Wrong!' "
+        echo -e "MyMark ... $(nproc) thread compile..."
+        echo "make -j$(nproc) || make -j1 || make -j1 V=s  || echo -e 'MyMark ...Something Wrong!' "
         make -j1 V=s &&  echo "status=success" >>$GITHUB_OUTPUT ||  echo "status=failed" >>$GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
