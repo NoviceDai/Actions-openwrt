@@ -44,7 +44,8 @@ A template for building OpenWrt with GitHub Actions
 - 2025/02/?? V3.16  Add luci-app-wechatpush
 - 2025/02/21 v0.1  放弃passwall，硬件很难支持。 转向：最简单方案，dnsmasq-full + chinadns-ng =》 旁路由 nftables 转发
 - 2025/02/22 v0.2  add luci-app-chinadns-ng , edit diy-part1.sh delete smallpackage 
-- 2025/02/23 V0.5  chinadns, smartdns,luci-app-smartdns 
+- 2025/02/23 V0.5  chinadns-ng, smartdns,luci-app-smartdns 
+- 2025/02/24 V0.6  luci-app-chinadns-ng
 
 ## License
 
