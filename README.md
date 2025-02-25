@@ -46,6 +46,7 @@ A template for building OpenWrt with GitHub Actions
 - 2025/02/24 V0.6  luci-app-chinadns-ng / workflow v2
 - 2025/02/24 V0.7  增加smallpackage，解决luci-app-chinadns-ng没有chinadns-ng支持的bug。增加luci-app-wolplus 
 - 2025/02/24 V0.8  Bind-dig  / DDNS scripts  
+- 2025/02/25 V0.9  Fix workflow bug: remove old artifact 
  
 
 ## License
