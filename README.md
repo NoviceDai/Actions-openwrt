@@ -48,6 +48,7 @@ A template for building OpenWrt with GitHub Actions
 - 2025/02/24 V0.8  Bind-dig  / DDNS scripts  
 - 2025/02/25 V0.9  Fix workflow bug: remove old artifact 
 - 2025/02/25 V1.0  + passwall  / - smartdns 
+- 2025/02/26 V1.1  - luci-app-chinadns-ng passwall中的singbox组件  nft-qos(base system)
 
 ## License
 
